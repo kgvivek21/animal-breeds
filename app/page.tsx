@@ -1,7 +1,7 @@
-import DogsBreedList from "@/components/DogsBreedList/DogsBreedList";
+import DogsBreedList from "@/components/DogsBreed/DogsBreed";
 
 const getDogsBreed = async () => {
-  const res = await fetch("http://localhost:3001/api/dogs");
+  const res = await fetch("http://localhost:3000/api/dogs");
 
   const response = await res.json();
   const dataResponse = response.message;
