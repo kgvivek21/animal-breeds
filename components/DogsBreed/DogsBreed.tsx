@@ -25,6 +25,7 @@ const DogsBreedList = ({ dogsBreed }: { dogsBreed: string[] }) => {
   };
 
   const handleClick = (btnName: string) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     switch (btnName) {
       case "First":
         setCurrentPage(1);
@@ -43,10 +44,7 @@ const DogsBreedList = ({ dogsBreed }: { dogsBreed: string[] }) => {
 
   return (
     <>
-      <label className="flex text-3xl font-extrabold justify-center mb-3">
-        List of Dog Breeds
-      </label>
-      <div className="flex flex-col gap-3 min-w-full md:min-w-max ">
+      <div className="flex flex-col gap-3 min-w-full">
         <SearchBreed inputHandler={inputHandler} />
         <BreedList dogsData={currentPageData} />
         <Pagination

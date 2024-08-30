@@ -18,6 +18,8 @@ const config: Config = {
         "primary-dark": "#357abd",
         secondary: "#F5A623",
         accent: "#F2F2F2",
+        card: "#F9F9F9",
+        "accent-card": "#333333",
       },
     },
   },

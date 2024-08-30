@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSans = Noto_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Dogs Breed",
@@ -16,7 +17,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${notoSans.className} bg-accent`}>
+        <div className="flex bg-primary justify-center items-center p-3">
+          <Link
+            href={"/"}
+            className="flex text-xl font-extrabold justify-center text-white"
+          >
+            List of Dog Breeds
+          </Link>
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

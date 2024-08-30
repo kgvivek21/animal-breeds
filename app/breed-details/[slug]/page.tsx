@@ -21,10 +21,19 @@ const DogDetail = async ({ params }: { params: { slug: string } }) => {
   const dogDesc = await getDogDesc(decodedDogName.split(" ").join("-"));
 
   return (
-    <>
+    <div className="m-4">
       <label className="flex text-lg font-bold justify-center">
         {capitaliseFirstLetter(decodedDogName)}
       </label>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitat,
+        inventore laudantium accusamus iusto voluptate debitis sequi voluptatum
+        doloribus reprehenderit at ad molestiae quasi officia eum, esse aliquid
+        nihil aspernatur voluptas! Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Ipsa, dolores quis distinctio ullam quidem voluptas a?
+        Ipsa expedita exercitationem placeat recusandae modi, ducimus,
+        praesentium, inventore aut perferendis omnis mollitia accusantium.
+      </p>
       <div className="flex flex-wrap gap-2 justify-center m-4">
         {dogDesc.length > 0
           ? dogDesc?.map((dog: string, index: number) => (
@@ -38,7 +47,7 @@ const DogDetail = async ({ params }: { params: { slug: string } }) => {
             ))
           : "Loading"}
       </div>
-    </>
+    </div>
   );
 };
 

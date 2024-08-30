@@ -5,7 +5,7 @@ const BreedList = ({ dogsData }: { dogsData: string[] }) => {
   return (
     <div>
       {dogsData.length > 0 ? (
-        <div className="flex flex-col gap-2">
+        <div className="flex justify-center gap-2 md:flex-row flex-wrap">
           {dogsData.map((dogs, index) => (
             <DogsBreed dogName={dogs} key={index} />
           ))}

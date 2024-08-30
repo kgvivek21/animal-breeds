@@ -6,7 +6,7 @@ const SearchBreed = ({
   inputHandler: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }) => {
   return (
-    <div className="flex h-full items-center border border-black p-3 gap-1 rounded-md">
+    <div className="flex h-full items-center border border-black p-3 gap-1 rounded-md min-w-full">
       <div className={`flex h-full mr-1 w-5 items-center`}>
         <svg viewBox="0 0 24 24" fill="currentColor">
           <path
@@ -19,8 +19,8 @@ const SearchBreed = ({
       <input
         type="text"
         onChange={inputHandler}
-        className="w-full py-0 pl-1 pr-3 border-none focus:outline-none"
-        placeholder="Search by Dog name"
+        className="w-full py-0 pl-1 pr-3 border-none focus:outline-none bg-accent"
+        placeholder="Search by Dog Breed"
       />
     </div>
   );
