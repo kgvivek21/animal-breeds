@@ -1,4 +1,4 @@
-export const capitaliseFirstLetter = (name: string) => {
+export const capitaliseFirstLetter = (name: string | null) => {
   const captialiseEarchWord = (word: string) =>
     word.charAt(0).toUpperCase() + word.slice(1);
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBreed from "../SearchBreed/SearchBreed";
 import BreedList from "../BreedList/BreedList";
 import Pagination from "../Pagination/Pagination";
@@ -24,6 +24,10 @@ const DogsBreedList = ({ dogsBreed }: { dogsBreed: string[] }) => {
     setCurrentPage(1);
   };
 
+  useEffect(() => {
+    console.log(currentPage, dogsBreed);
+  }, []);
+
   const handleClick = (btnName: string) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     switch (btnName) {
@@ -41,6 +45,7 @@ const DogsBreedList = ({ dogsBreed }: { dogsBreed: string[] }) => {
         break;
     }
   };
+  //zustand - state management
 
   return (
     <>

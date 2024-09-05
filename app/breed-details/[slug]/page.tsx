@@ -1,4 +1,6 @@
 import { capitaliseFirstLetter } from "@/utils/utils";
+import Image from "next/image";
+
 import React from "react";
 
 const getDogDesc = async (dogName: string) => {
@@ -37,13 +39,13 @@ const DogDetail = async ({ params }: { params: { slug: string } }) => {
       <div className="flex flex-wrap gap-2 justify-center m-4">
         {dogDesc.length > 0
           ? dogDesc?.map((dog: string, index: number) => (
-              <img
+              <Image
                 src={dog}
                 alt="name"
                 width={100}
                 height={100}
                 key={index}
-              ></img>
+              ></Image>
             ))
           : "Loading"}
       </div>

@@ -10,9 +10,8 @@ const DogsBreed = ({ dogName }: { dogName: string }) => {
       href={`/breed-details/${dogName}`}
     >
       {capitaliseFirstLetter(dogName)}
-
       <div className="border border-grey min-w-full rounded-full"></div>
-      <p className="line-clamp-3 text-justify text-ellipsis">
+      <p role="dogDesc" className="line-clamp-3 text-justify text-ellipsis">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitat,
         inventore laudantium accusamus iusto voluptate debitis sequi voluptatum
         doloribus reprehenderit at ad molestiae quasi officia eum, esse aliquid

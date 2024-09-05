@@ -7,8 +7,8 @@ const getDogsBreed = async () => {
   const dataResponse = response.message;
 
   const dataArray =
-    Object.keys(dataResponse).length > 0 &&
-    Object.keys(dataResponse).map((dogs: string) => {
+    Object.keys(dataResponse)?.length > 0 &&
+    Object.keys(dataResponse)?.map((dogs: string) => {
       const dogsBreedCountry = dataResponse[dogs];
       return Array.isArray(dogsBreedCountry) && +dogsBreedCountry.length > 0
         ? dogsBreedCountry.map((dog) => `${dog} ${dogs}`)
@@ -21,6 +21,7 @@ export default async function Home() {
   const dogsResponse = await getDogsBreed();
 
   return (
+    // <div role="textRole">List of Dog Breeds</div>
     <main className="flex flex-col items-center m-4 ">
       <DogsBreedList dogsBreed={dogsResponse}></DogsBreedList>
     </main>

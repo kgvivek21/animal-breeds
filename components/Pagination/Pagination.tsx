@@ -22,6 +22,7 @@ const Pagination: React.FC<PaginationType> = ({
         <div className="flex gap-1 justify-center">
           <button
             type="button"
+            role="buttons"
             className="button-style"
             disabled={currentPage === 1}
             onClick={() => clickEvent("First")}
@@ -30,6 +31,7 @@ const Pagination: React.FC<PaginationType> = ({
           </button>
           <button
             type="button"
+            role="buttons"
             className="button-style"
             disabled={currentPage === 1}
             onClick={() => clickEvent("Previous")}
@@ -38,6 +40,7 @@ const Pagination: React.FC<PaginationType> = ({
           </button>
           <button
             type="button"
+            role="buttons"
             className="button-style"
             disabled={currentPage === totalPage}
             onClick={() => clickEvent("Next")}
@@ -46,6 +49,7 @@ const Pagination: React.FC<PaginationType> = ({
           </button>
           <button
             type="button"
+            role="buttons"
             className="button-style"
             disabled={currentPage === totalPage}
             onClick={() => clickEvent("Last")}
